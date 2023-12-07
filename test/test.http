@@ -1,0 +1,15 @@
+@server=http://localhost:4004
+
+###
+POST {{server}}/graphql/catalog/Books
+Content-Type: POST url HTTP/1.1
+X-Request-Type: GraphQL
+
+query {
+    nodes {
+        ID,
+        title,
+        stock
+    }
+}
+
